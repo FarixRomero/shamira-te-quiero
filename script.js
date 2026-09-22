@@ -1,9 +1,9 @@
 const messages = [
   'Primer mes: me gusta muchísimo cómo piensas.',
-  'Segundo mes: me encanta bailar contigo.',
-  'Tercer mes: gracias por estar conmigo.',
-  'Cuarto mes: tu sonrisa hace bonito cualquier día.',
-  'Quinto mes: contigo, hasta lo simple se siente especial.'
+  'Segundo mes: me encanta muchismo cómo besas muah, belleza.',
+  'Tercer mes: Menos Starcraft. Más amor',
+  'Cuarto mes: Que la enamore dice.',
+  'Quinto mes: 1.Besar a mi Shami 2.Starcraft 3. No se que poner AWWW'
 ];
 const positions = [
   { left: '7%', bottom: '3%', scale: .78 }, { left: '28%', bottom: '15%', scale: 1 },
