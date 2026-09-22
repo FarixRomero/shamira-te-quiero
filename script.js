@@ -1,9 +1,9 @@
 const messages = [
-  'Me gusta muchísimo cómo piensas.',
-  'Me encanta bailar contigo.',
-  'Gracias por estar conmigo.',
-  'Tu sonrisa hace bonito cualquier día.',
-  'Contigo, hasta lo simple se siente especial.'
+  'Primer mes: me gusta muchísimo cómo piensas.',
+  'Segundo mes: me encanta bailar contigo.',
+  'Tercer mes: gracias por estar conmigo.',
+  'Cuarto mes: tu sonrisa hace bonito cualquier día.',
+  'Quinto mes: contigo, hasta lo simple se siente especial.'
 ];
 const positions = [
   { left: '7%', bottom: '3%', scale: .78 }, { left: '28%', bottom: '15%', scale: 1 },
@@ -26,7 +26,7 @@ function plant() {
   flower.style.left = p.left; flower.style.bottom = p.bottom; flower.style.transform = `scale(${p.scale})`;
   bed.append(flower); message.textContent = messages[planted]; card.classList.add('show');
   planted++; count.textContent = planted;
-  prompt.textContent = planted === messages.length ? 'Mira lo que hicimos crecer…' : 'Toca otra vez para plantar una más.';
+  prompt.textContent = planted === messages.length ? 'Cinco meses floreciendo juntos…' : 'Toca otra vez para plantar otro girasol.';
   setTimeout(() => { locked = false; if (planted === messages.length) setTimeout(showBouquet, 1150); }, 700);
 }
 function showBouquet(){
@@ -36,7 +36,7 @@ function showBouquet(){
 document.querySelector('#start-button').onclick = () => show(garden);
 plot.onclick = plant; plot.onkeydown = e => { if(e.key === 'Enter' || e.key === ' ') { e.preventDefault(); plant(); } };
 document.querySelector('#more-button').onclick = () => show(finale);
-document.querySelector('#restart-button').onclick = () => { planted=0; locked=false; bed.innerHTML=''; count.textContent=0; card.classList.remove('show'); prompt.textContent='Toca la tierra para plantar la primera.'; document.querySelector('#tap-circle').classList.remove('hidden'); show(intro); };
+document.querySelector('#restart-button').onclick = () => { planted=0; locked=false; bed.innerHTML=''; count.textContent=0; card.classList.remove('show'); prompt.textContent='Toca la tierra para plantar el primero.'; document.querySelector('#tap-circle').classList.remove('hidden'); show(intro); };
 const canvas = document.querySelector('#petals'), ctx = canvas.getContext('2d'); let petals=[];
 function resize(){canvas.width=innerWidth*devicePixelRatio;canvas.height=innerHeight*devicePixelRatio;ctx.scale(devicePixelRatio,devicePixelRatio)}
 function addPetal(){petals.push({x:Math.random()*innerWidth,y:-12,s:3+Math.random()*4,v:0.35+Math.random()*.5,w:(Math.random()-.5)*.5,r:Math.random()*6.28})}
